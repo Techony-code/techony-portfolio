@@ -1,16 +1,14 @@
 import React from 'react'
 // images
-import Image from '../assets/avatar.svg'
+import Image from '../assets/avatar.jpg'
 // icons
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
-import { FaXTwitter } from "react-icons/fa6";
-// type animation
 import { TypeAnimation } from 'react-type-animation'
 // for Motion
 import { motion } from 'framer-motion'
 // variable
 import { fadeIn } from '../variants'
 import { Link } from 'react-scroll'
+import CountUp from 'react-countup'
 
 function Banner() {
   return (
@@ -91,27 +89,33 @@ function Banner() {
                 href="#work"
                 className="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
               >
-                My Portfolio
+                My works
               </a>
             </motion.div>
 
-            {/* socials */}
+            {/* stats (counter up) */}
             <motion.div
               variants={{
-                hidden: { scale: 0, opacity: 0 },
-                show: { scale: 1, opacity: 1, transition: { delay: 0.7, type: 'spring', stiffness: 120 } }
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0, transition: { delay: 0.7, duration: 0.6 } }
               }}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.7 }}
-              className="flex text-2xl gap-x-6 justify-center lg:justify-start"
+              className="flex gap-x-12 justify-center lg:justify-start mt-8"
             >
-              {[{ icon: <FaGithub />, link: "#" }, { icon: <FaLinkedinIn />, link: "#" }, { icon: <FaXTwitter />, link: "#" }]
-                .map((social, index) => (
-                  <a key={index} href={social.link} className="p-3 rounded-full bg-gray-800/50 text-gray-300 hover:bg-cyan-600 hover:text-white transition-all duration-300">
-                    {social.icon}
-                  </a>
-              ))}
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-cyan-400">
+                  <CountUp start={0} end={2} duration={2.5} />+
+                </h3>
+                <p className="text-gray-400">Years Experience</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-cyan-400">
+                  <CountUp start={0} end={25} duration={2.5} />+
+                </h3>
+                <p className="text-gray-400">Projects Completed</p>
+              </div>
             </motion.div>
           </div>
 
@@ -126,7 +130,7 @@ function Banner() {
             <img
               src={Image}
               alt="Avatar"
-              className="w-40 sm:w-56 md:w-72 lg:max-w-md transition-transform duration-500 shadow-2xl shadow-cyan-500/40 rounded-full"
+              className="w-40 sm:w-48 md:w-56 lg:w-74 xl:w-80 transition-transform duration-500 shadow-2xl shadow-cyan-500/40 rounded-full"
             />
           </motion.div>
         </div>

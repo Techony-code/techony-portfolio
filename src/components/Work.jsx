@@ -3,30 +3,36 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
+// ✅ Import images correctly
+import img1 from "../assets/img1.png";
+import img2 from "../assets/img2.png";
+import img3 from "../assets/img3.png";
+
 const projects = [
   {
     title: "Conference Ticket Generator",
     description:
       "A React app that generates conference tickets with a professional design. Built using React + Tailwind.",
-    image: "src/assets/img1.png",
+    image: img1,
     github: "https://github.com/your-username/conference-ticket",
-    demo: "https://conference-ticket-demo.netlify.app",
+    demo: "https://hellcatproject.netlify.app/",
   },
   {
     title: "Decrntralized Staking App",
     description:
       "A fun JavaScript game where users guess the correct color. Focused on DOM manipulation & beginner-friendly logic.",
-    image: "src/assets/img2.png",
+    image: img2,
     github: "https://github.com/your-username/color-game",
     demo: "https://nexostakingapp.vercel.app",
   },
   {
-    title: "Blockchain Voting dApp",
+    title: "Decentralized Exchange",
     description:
-      "A decentralized voting app built with Solidity, Hardhat, and React frontend. Demonstrates smart contract integration.",
-    image: "src/assets/img3.png",
-    github: "https://github.com/your-username/voting-dapp",
-    demo: "https://voting-dapp-demo.vercel.app",
+      "Developed a decentralized exchange app that facilitate the trustless trading between tokens.",
+    image: img3,
+    github:
+      "https://github.com/Techony-code/Decentralized-Exchange-Hardhat-Solidity-Project",
+    demo: "https://dex-challenge-beta.vercel.app/",
   },
 ];
 
@@ -53,10 +59,7 @@ export default function Works() {
           My Works
         </motion.h2>
 
-        <div
-          ref={ref}
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-        >
+        <div ref={ref} className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((proj, index) => (
             <motion.div
               key={index}
@@ -79,7 +82,9 @@ export default function Works() {
                 <h3 className="text-xl font-semibold mb-2 text-cyan-300">
                   {proj.title}
                 </h3>
-                <p className="text-sm text-gray-300 mb-4">{proj.description}</p>
+                <p className="text-sm text-gray-300 mb-4">
+                  {proj.description}
+                </p>
                 <div className="flex gap-4">
                   <a
                     href={proj.github}

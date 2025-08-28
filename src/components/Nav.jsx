@@ -21,11 +21,9 @@ function Nav() {
       if (timeoutId) {
         clearTimeout(timeoutId)
       }
-
-      // Show nav on scroll
       setShow(true)
 
-      // Set new timeout to hide nav after 2 seconds
+      // Timeout to hide nav after 2 seconds
       const newTimeoutId = setTimeout(() => {
         setShow(false)
       }, 2000)

@@ -14,10 +14,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",   // ✅ Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID",  // ✅ Replace with your EmailJS template ID
+        "service_6mxzbdv",   
+        "template_13fa79b", 
         form.current,
-        "YOUR_PUBLIC_KEY"    // ✅ Replace with your EmailJS public key
+        "fSu5liyLOo5GwysFL"    
       )
       .then(
         () => {
@@ -79,7 +79,7 @@ export default function Contact() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-slate-800/70 px-5 py-3 rounded-xl border border-slate-700 hover:border-cyan-400 hover:text-cyan-400 transition-all"
           >
-            <FaXTwitter /> X
+            <FaXTwitter /> 
           </a>
         </div>
 
