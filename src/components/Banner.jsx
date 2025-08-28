@@ -130,7 +130,7 @@ function Banner() {
             <img
               src={Image}
               alt="Avatar"
-              className="w-40 sm:w-48 md:w-56 lg:w-74 xl:w-80 transition-transform duration-500 shadow-2xl shadow-cyan-500/40 rounded-full"
+              className="w-40 sm:w-48 md:w-56 lg:w-74 xl:w-80 transition-transform duration-500 shadow-2xl shadow-cyan-500/40 rounded-full filter brightness-75"
             />
           </motion.div>
         </div>

@@ -10,9 +10,9 @@ import img3 from "../assets/img3.png";
 
 const projects = [
   {
-    title: "Conference Ticket Generator",
+    title: "Dodge Hellcat documentation",
     description:
-      "A React app that generates conference tickets with a professional design. Built using React + Tailwind.",
+      "A website that tells you everything you need to know about the Dodge Hellcat.",
     image: img1,
     github: "https://github.com/your-username/conference-ticket",
     demo: "https://hellcatproject.netlify.app/",

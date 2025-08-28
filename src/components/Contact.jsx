@@ -46,7 +46,7 @@ export default function Contact() {
 
         <p className="text-gray-300 mb-10 max-w-xl mx-auto">
           I’m always open to discussing new projects, opportunities, or
-          collaborations. You can message me directly here 👇 or reach me via my links.
+          collaborations. You can message me directly here or reach me via my links.
         </p>
 
         {/* Quick Contact Links */}
