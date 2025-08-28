@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-secondary text-lg leading-8 text-white;
+  }
+}
+
+@layer components {
+  .h2 {
+    @apply font-primary text-[32px] mb-6 tracking-[10%] uppercase;
+  }
+  .h3 {
+    @apply font-primary font-semibold text-[26px] mb-6 leading-[46px];
+  }
+  .btn {
+    @apply rounded-full font-primary text-white font-medium;
+    background: linear-gradient(
+      92.23deg,
+      #22d3ee 21.43%,   /* cyan-400 */
+      #0ea5e9 50.63%,   /* sky-500 */
+      #3b82f6 100%,     /* blue-500 */
+      #1d4ed8 117.04%   /* blue-700 */
+    );
+    box-shadow: 0px 4.42184px 107.23px rgba(14, 165, 233, 0.5); /* cyan glow */
+  }
+  .btn:hover {
+    background: linear-gradient(
+      92.23deg,
+      #1d4ed8 21.43%,   /* blue-700 */
+      #3b82f6 50.63%,   /* blue-500 */
+      #0ea5e9 100%,     /* sky-500 */
+      #22d3ee 117.04%   /* cyan-400 */
+    );
+  }
+  .btn-sm {
+    @apply h-[48px] px-6 text-sm;
+  }
+  .btn-lg {
+    @apply h-[56px] px-10 text-base;
+  }
+  .btn-link {
+    @apply text-base;
+  }
+  .section {
+    @apply py-8 lg:py-24 lg:h-screen flex items-center;
+  }
+  .active {
+    @apply gradient text-white p-4 rounded-full;
+  }
+}
+
+@layer utilities {
+  .gradient {
+    background: linear-gradient(
+      92.23deg,
+      #22d3ee 21.43%,   /* cyan-400 */
+      #0ea5e9 50.63%,   /* sky-500 */
+      #3b82f6 100%,     /* blue-500 */
+      #1d4ed8 117.04%   /* blue-700 */
+    );
+  }
+  .text-gradient {
+    @apply font-bold font-primary;
+    color: #fff; /* fallback */
+    background: linear-gradient(to right, #22d3ee, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .text-gradient:hover {
+    background: linear-gradient(to right, #3b82f6, #22d3ee);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
