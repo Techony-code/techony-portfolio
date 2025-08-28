@@ -14,7 +14,7 @@ const projects = [
     description:
       "A website that tells you everything you need to know about the Dodge Hellcat.",
     image: img1,
-    github: "https://github.com/your-username/conference-ticket",
+    github: "https://github.com/Techony-code/hellcat",
     demo: "https://hellcatproject.netlify.app/",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     description:
       "A fun JavaScript game where users guess the correct color. Focused on DOM manipulation & beginner-friendly logic.",
     image: img2,
-    github: "https://github.com/your-username/color-game",
+    github: "https://github.com/Techony-code/decentralized-staking",
     demo: "https://nexostakingapp.vercel.app",
   },
   {
